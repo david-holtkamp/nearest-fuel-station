@@ -1,0 +1,20 @@
+<h2>Closest Fuel Station!</h2>
+
+<% search_results.get_fuel_station.each do |fuel_station| %>
+  <section class="results">
+    <h3 class="name">Fuel Station: <%= fuel_station.name %></h3>
+    <p class="address">Address: <%= fuel_station.full_address %></p>
+    <p class="fuel-type">Fuel Type: <%= fuel_station.fuel_type %></p>
+    <p class="access-times">Access Time: <%= fuel_station.access_times %></p>
+  </section>
+<% end %>
+
+<h3>Directions</h3>
+
+<% search_results.get_station_directions.each do |direction| %>
+  <section class="direction-info">
+    <h3 class="distance">Distance: <%= direction.total_distance %></h3>
+    <p class="travel-time">Travel Time: <%= direction.travel_time %></p>
+    <p class="directions">Directions: <%= direction.directions %></p>
+  </section>
+<% end %>
